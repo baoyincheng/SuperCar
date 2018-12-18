@@ -1,0 +1,42 @@
+/* .carousel-item{
+    height: 730px;
+} */
+.middle{
+    
+    
+}
+.middle-one{
+    width: 100%;
+    height: 600px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border: 2px solid red
+   
+}
+.middle-one img{
+    width: 100%;
+    height: 697px;
+}
+.mid-text{
+    margin-top: -6px;
+    width: 100%;
+}
+.latest-hei-top{
+    height: 300px;
+      
+}
+.latest-hei-bottom{
+    height: 294px; 
+}
+.latest-pad>div{
+    border-top: 1px solid #aaa;
+    padding: 0;
+    
+}
+.latest-pad>div img{
+    width: 100%;
+    overflow: hidden;
+}
+.latest-pad-left{
+    border-left: 1px solid #aaa;
+}

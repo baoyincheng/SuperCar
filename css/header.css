@@ -1,62 +1,174 @@
-header.page-header{
-    width: 100%;
-    background: rgba(229, 229, 229, 0.8);
+/*整体*/
+.page-header {
+    position:fixed;
+    top:0;
+    z-index:999;
+    width:100%;
+    max-width:1920px;
+    background: rgba(121, 120, 120, 0.8);
+    margin:0 auto;
+    -webkit-transition:-webkit-transform .3s ease-out;
+    transition:-webkit-transform .3s ease-out;
+    transition:transform .3s ease-out;
+    transition:transform .3s ease-out,-webkit-transform .3s ease-out
 }
+/*条幅*/
 .page-header-inner{
-    background: rgba(255, 255, 255, 0.8);
+    background: rgb(0, 0, 0);
+        height:60px;
+        padding:5px 22px;
+        position:relative;
+    
 }
-.bar{
-    width:22px;
-    height: 2px;
-    background: #a8a8a8;
-    margin-top: 5px;
-    margin-left: 10px;
+/*左*/
+.burger-container {
+     position:absolute;
+     top:7px;
+     left:0;
+     display:inline-block;
+     height:40px;
+     width:40px;
+     cursor:pointer;
+      -webkit-transform:rotate(0);
+     transform:rotate(0);
+     -webkit-transition:all .3s cubic-bezier(.4,.01,.165,.99);
+     transition:all .3s cubic-bezier(.4,.01,.165,.99);
+     -webkit-user-select:none;
+     -moz-user-select:none;
+     -ms-user-select:none;
+     user-select:none;
+     -webkit-tap-highlight-color:transparent
+ } 
+/*变化之前*/
+.burger-container {
+    position:absolute;
+    top:10px;
+    left:0;
+    display:inline-block;
+    height:40px;
+    width:40px;
+    cursor:pointer;
+    -webkit-transform:rotate(0);
+    transform:rotate(0);
+    -webkit-transition:all .3s cubic-bezier(.4,.01,.165,.99);
+    transition:all .3s cubic-bezier(.4,.01,.165,.99);
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    -webkit-tap-highlight-color:transparent
 }
-header>div>div>div:first-child{
-    margin-top:12px;
+.burger-container .burger {
+    width:18px;
+    height:8px;
+    position:relative;
+    display:block;
+    margin:-6px auto 0;
+    top:50%; 
 }
-.barger_t{
-    width: 40px;
-    height: 40px;
-    margin-top: 18px;
-    margin-left: 10px;
+.burger-container .burger .bar {
+    width:100%;
+    height:2px;
+    display:block;
+    margin-bottom: 4px;
+    position:relative;
+    background:#f5f5f5;
 }
-.barger-d{
-    width: 60px;
-    height: 40px;
+/*变化以后*/
+.burger-container.cross {
+    -webkit-transform:rotate(90deg);
+    transform:rotate(90deg)
 }
+.burger-container.cross .burger .bar {
+    -webkit-transition:-webkit-transform .4s cubic-bezier(.4,.01,.165,.99);
+    transition:-webkit-transform .4s cubic-bezier(.4,.01,.165,.99);
+    transition:transform .4s cubic-bezier(.4,.01,.165,.99);
+    transition:transform .4s cubic-bezier(.4,.01,.165,.99),-webkit-transform .4s cubic-bezier(.4,.01,.165,.99);
+    -webkit-transition-delay:.2s;
+    transition-delay:.1s
+}
+.burger-container.cross .burger .bar.bar-top {
+    -webkit-transform:translateY(5px) rotate(45deg);
+    transform:translateY(5px) rotate(45deg);
+    top:0px;
+    
+}
+.burger-container.cross .burger .bar.bar-mdl {
+    -webkit-transform:translateY(0px) rotate(-45deg);
+    transform:translateY(0px) rotate(-45deg);
+    top:-1px;
+}
+.burger-container.cross .burger .bar.bar-btm {
+    opacity:0
+}
+/* LOGO */
 .my_logo{
     width: 70px;
-    height: 45px;
-    margin-top:8px;
-    margin-bottom: 8px;
+    height: 36px;
+    position:absolute;
+    left:45%;
+    top:17px;
 }
 .my_logo1{
     width:130px;
-    height:20px;
-    margin-top: 33px;
-    margin-right: 17px;
+    height:32px;
+    position:absolute;
+    right:50px;
+    top:18px;
 }
 #header-a{
     list-style: none;
 }
-.bar_1{
-    width:24px;
-    height: 2px;
-    z-index: 99;
-    background: #a8a8a8;
-
-    margin-left: 10px;
-    transform: translateY(10px) rotate(45deg);
-    transition: all 0.5s linear;
+/*LOGO div 样式*/
+.my-img-logo{
+    width: 100%;
+    height:34px;
+    position:absolute;
+    left:39px;
+    top:2.5px;
+    margin: 0 auto;
 }
-.bar_2{
-    width:24px;
-    height: 2px;
-    z-index: 99;
-    background: #a8a8a8;
-
-    margin-left: 10px;
-    transform: translateY(8px) rotate(-45deg);
-    transition: all 0.5s linear;
+/* 隐藏的导航 */
+.header-navigation-down {
+    width:100%;
+    height:0;
+    z-index:99;
+    position: absolute;
+    top:60px;
+    left: 0;
+    
+}
+.burger-container.cross~.open{   
+    height:900px;
+    transition: all 1s linear;
+}
+.menu-opened{
+    height:100%;
+    width:100%;
+    overflow:hidden;
+}
+/* 打开以后 */
+.navigation-bp-image {
+    width:100%;
+}
+.bar-text{
+    height: 100%;
+    width:100%;
+    position: absolute;
+    top:0;
+    left:5%;
+    z-index:99;
+    overflow:hidden;
+}
+.my-li-first{
+    margin-top: 5%; 
+}
+.my-font{
+    font-size:3.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(179, 179, 178);
+    text-decoration: none !important;
+}
+.my-font:hover{
+    color: #f5f5f5;
 }
