@@ -1,360 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <script src="../js/jquery-1.11.3.js"></script>
 
-    <!--<link rel="stylesheet" href="../css/11.css">-->
-</head>
-<body>
-<header class="page-header">
-    <div class="d-flex justify-content-between">
-
-            <div class="barger_t">
-                <a href="javascript:a.onclick=function(e){ e.preventDefault() }" data-trigger="open">
-                <div class="bar" id="one"></div>
-                <div class="bar" id="two"></div>
-                <div class="bar" id="there"></div>
+<header class="page-header p-0">
+    <!--顶部横条-->
+    <div class="page-header-inner d-flex flex-nowrap p-0">
+        <!--三个横-->
+        <div class="burger-container" @click="bar()" :class="barClass">
+            <div class="burger">
+                <div class="bar bar-top"></div>
+                <div class="bar bar-mdl"></div>
+                <div class="bar bar-btm"></div>
+            </div>
+        </div>
+        <!--中间LOGO-->
+        <div class="my-img-logo d-flex flex-nowrap">
+            <div class="my-LOGO">
+                <a href="#">
+                    <img src="../img/header/LOGO.png" class="my_logo" alt="">
                 </a>
             </div>
 
-        <picture class="">
-            <a href="#">
-                <img src="../img/LOGO.png" class="my_logo" alt="">
-            </a>
-        </picture>
-
-        <picture class="">
-            <a href="#">
-                <img src="../img/logo1.png" class="my_logo1" alt="">
-            </a>
-        </picture>
-    </div>
-    <script src="../js/header.js"></script>
-
-    <nav class="header-navigation" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-        <div class="navigation-bg-image-wrp">
-            <picture>
-                <img class="navigation-bp-image lazyloaded" data-src="https://assets.bugatti.com/fileadmin/_processed_/sei/nav/se-image-9c9e8e6b0c257bc4f758007628425ae7.jpg" src="https://assets.bugatti.com/fileadmin/_processed_/sei/nav/se-image-9c9e8e6b0c257bc4f758007628425ae7.jpg" alt="Navigation Background">
-            </picture>
-        </div>
-        <div class="navigation-wrp menu-opened">
-            <div class="navigation-bg"></div>
-            <ul class="mainnav-menu">
-                <li class="mainnav-menu-item">
-                    <a href="/divo/">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">迪沃</font>
-                        </font>
-                    </a>
-                </li>
-                <li class="mainnav-menu-item">
-                            <span class="mainnav-menu-item-with-sub">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">凯龙</font>
-                                </font>
-                            </span>
-                    <ul style="display: none;">
-                        <li>
-                            <a href="/chiron/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">凯龙</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/chiron-sport/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align:inherit;">凯龙运动</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mainnav-menu-item">
-                            <span class="mainnav-menu-item-with-sub">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">威龙</font>
-                                </font>
-                            </span>
-                    <ul style="display: none;">
-                        <li>
-                            <a href="/veyron/veyron-164/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">威龙16.4</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/veyron/veyron-164-grand-sport/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">威龙16.4 Grand Sport</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/veyron/veyron-164-super-sport/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">威龙16.4超级运动</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/veyron/veyron-164-grand-sport-vitesse/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">威龙16.4 Grand Sport Vitesse</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/veyron/bugatti-editions/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">布加迪版</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/veyron/technology/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">技术</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mainnav-menu-item">
-                            <span class="mainnav-menu-item-with-sub">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">牌</font>
-                                </font>
-                            </span>
-                    <ul style="display: none;">
-                        <li>
-                            <a href="/brand/art-forme-technique/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">艺术形式技术</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/brand/la-vie-en-bleu/" itemprop="url">
-                                        <span itemprop="name">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">La Vie En Bleu</font>
-                                        </font>
-                                        </span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mainnav-menu-item">
-                            <span class="mainnav-menu-item-with-sub">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">传统</font>
-                                </font>
-                            </span>
-                    <ul style="display: none;">
-                        <li>
-                            <a href="/tradition/history/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">历史</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/tradition/bugatti-models/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">布加迪模型</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/tradition/myths-anecdotes/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">神话与轶事</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/tradition/racing/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">赛跑</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mainnav-menu-item">
-                            <span class="mainnav-menu-item-with-sub">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">莫尔塞姆</font>
-                                </font>
-                            </span>
-                    <ul style="display: none;">
-                        <li>
-                            <a href="/molsheim/molsheim-experience/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">Molsheim体验</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/molsheim/atelier/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">画室</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mainnav-menu-item">
-                            <span class="mainnav-menu-item-with-sub">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">所有权</font>
-                                </font>
-                            </span>
-                    <ul style="display: none;">
-                        <li>
-                            <a href="/ownership/customer-experience/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">客户体验</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.partner.bugatti/" itemprop="url">
-                                        <span itemprop="name">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">伙伴</font>
-                                            </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/ownership/bugatti-certified/" itemprop="url">
-                                        <span itemprop="name"><font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">布加迪认证</font>
-                                        </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/ownership/financial-services/" itemprop="url">
-                                        <span itemprop="name"><font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">金融服务</font>
-                                        </font>
-                                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/ownership/recalls/" itemprop="url">
-                                        <span itemprop="name"><font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">召回</font>
-                                        </font>
-                                        </span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="language-menu-select">
-                <label class="language-menu-label" for="language-menu">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">语言：</font>
-                    </font>
-                </label>
-                <select id="language-menu" class="language-menu">
-                    <option value="/home/" selected="">
-                        <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英语</font>
-                        </font>
-                    </option>
-                    <option value="/de/home/">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">德语</font>
-                        </font>
-                    </option>
-                    <option value="/fr/home/">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">法语</font>
-                        </font>
-                    </option>
-                </select>
-                <div class="language-menu-select-styled">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">英语</font>
-                    </font>
-                </div>
-                <ul class="language-menu-select-options">
-                    <li class="current-language"><a href="/home/">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">英语</font>
-                        </font>
-                    </a>
-                    </li>
-                    <li>
-                        <a href="/de/home/">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">德语</font>
-                            </font>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/fr/home/">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">法语</font>
-                            </font>
-                        </a>
-                    </li>
-                    <li class="language-menu-hide-list">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">- </font>
-                        </font>
-                    </li>
-                </ul>
+            <div>
+                <a href="#">
+                    <img src="../img/header/logo1.png" class="my_logo1" alt="">
+                </a>
             </div>
         </div>
-    </nav>
-
-</header>
-</body>
-</html>
+        <!-- 隐藏的大导航 -->
+        <nav class="header-navigation-down open" :class="navClass">
+        <!--背景-->
+            <div class="menu-opened">
+                <img class="navigation-bp-image" src="../img/header/bar.jpg" alt="Navigation Background">
+            </div>
+            <div class="bar-text">
+                <ul class="list-unstyled">
+                    <li class="my-li-first"><a href="#" class="my-font">CLUB</a></li>
+                    <li class="my-li"><a href="#" class="my-font">COMPETITION</a></li>
+                    <li class="my-li"><a href="#" class="my-font">BRAND</a></li>
+                    <li class="my-li"><a href="#" class="my-font">LIMIITED EDITION</a></li>
+                    <li class="my-li"><a href="#" class="my-font">VIP ACTIVITY</a></li>
+                    <li class="my-li"><a href="#" class="my-font">ABOUT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <script src="../js/header.js"></script>
