@@ -1,0 +1,13 @@
+var can = document.getElementById("f-c");
+var ctx = can.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(14,0);
+ctx.lineTo(0,14);
+ctx.moveTo(14,0);
+ctx.lineTo(28,14);
+ctx.moveTo(14,0);
+ctx.lineTo(14,28);
+ctx.lineWidth = 3;
+ctx.lineCap = "round";
+ctx.strokeStyle="#fff";
+ctx.stroke();
