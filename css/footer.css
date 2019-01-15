@@ -1,24 +1,22 @@
 .page-footer{
     background:#000;
     width: 100%;
-     height:300px;
-    position: relative;
+    height:220px;
     color:#fff;
 }
-.canvas{
-    background-color: aqua;
+.page-footer .footer-nav::before{
+    content: " ";
+    display: table;
 }
 .page-footer .footer-nav>div{
     width: 37px;
     font-size:2px;
-    
-    margin:30px auto;
-    /* transform: rotate(-90deg) */
+    margin:20px auto 10px auto;
 }
 .page-footer .footer-nav .footer-nav-ul{
     width: 248px;
     height:30px;
-    margin:30px auto 0 auto;
+    margin:15px auto 0 auto;
     padding:0;
 }
 .page-footer .footer-nav .footer-nav-li{
@@ -28,13 +26,18 @@
 }
 .footer-mid{
     width:300px;
-    margin:30px auto 10px auto
+    margin:15px auto 10px auto
 }
 .footer-ul{
     margin: 0 auto 0 auto;
     width:50%;
-    padding-top:50px; 
+    padding-top:15px; 
 }
 .footer-ul li{
     display: inline;
+}
+.footer-ul li select{
+    background-color: #000;
+    color: #fff;
+    border: 0;
 }
