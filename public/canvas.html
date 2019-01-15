@@ -1,0 +1,38 @@
+
+<div class="carousel-canvas-div">
+    <canvas id="c3" width="120" height="170" class="carousel-canvas"></canvas>
+</div>
+        <script>
+            var c3 = document.getElementById("c3");
+            var ctx = c3.getContext("2d");
+            var y = 0;
+            function arrow(){
+                ctx.beginPath();
+                ctx.moveTo(0,y);
+                ctx.lineTo(60,12+y);
+                ctx.lineTo(120,y);
+                ctx.moveTo(0,y+4);
+                ctx.lineTo(60,20+y);
+                ctx.lineTo(120,y+4); 
+                ctx.moveTo(0,y+8);
+                ctx.lineTo(60,28+y);
+                ctx.lineTo(120,y+8);
+                ctx.strokeStyle = '#5befff'
+                ctx.lineWidth = 5
+                ctx.stroke();
+            }
+            var z = 0;
+            var yDirection = 1;
+            setInterval(function(){
+                ctx.clearRect(0,0,120,200);
+                arrow();
+                
+                if(y<=140){
+                    y++;
+                }else{
+                    y=0;
+                }
+                z++;
+                
+            },5)
+        </script>
