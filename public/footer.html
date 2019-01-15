@@ -1,9 +1,9 @@
 
     <footer class="page-footer">
-        <table></table>
+        
         <div class="footer-nav">          
             <div class="footer-nav-top">
-                <a href=""><canvas id="f-c" width="28" height="28"></canvas></a>
+                <a href="#top"><canvas id="f-c" width="28" height="28"></canvas></a>
             </div>
             <ul class="footer-nav-ul">
                 <li class="footer-nav-li"><a href="#"><img src="../img/footer/footer1.png" alt=""></a></li>
@@ -21,12 +21,33 @@
         </div>
         <nav>
             <ul class=" footer-ul list-inline d-flex justify-content-between">
-                <li>联系我们</li>
-                <li>Cookie政策</li>
-                <li>隐私政策</li>
-                <li>条款和条件</li>
-                <li>更多</li>
+                <li><a>联系我们</a></li>
+                <li><a>Cookie政策</a></li>
+                <li><a>隐私政策</a></li>
+                <li><a>条款和条件</a></li>
+                <li>
+                    <select>
+                        <option hidden><a>更多</a></option>
+                        <option><a href="">111</a></option>
+                        <option><a href="">222</a></option>
+                        <option><a href="">333</a></option>
+                    </select>
+                </li>
             </ul>
         </nav>
     </footer>
-    <script src="../js/footer.js"></script>
+    <script>
+        var can = document.getElementById("f-c");
+        var ctx = can.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(14,0);
+        ctx.lineTo(0,14);
+        ctx.moveTo(14,0);
+        ctx.lineTo(28,14);
+        ctx.moveTo(14,0);
+        ctx.lineTo(14,28);
+        ctx.lineWidth = 3;
+        ctx.lineCap = "round";
+        ctx.strokeStyle="#fff";
+        ctx.stroke();
+    </script>

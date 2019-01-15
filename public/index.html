@@ -10,36 +10,68 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/vue.js"></script>
+    <!-- <script src="../js/canvas.js"></script> -->
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/footer.css">
-
 </head>
 <body>
     <div id="header"></div>
-    <div class="middle">
-        <!--轮播图-->
-        <div class="carousel" id="demo" data-ride="carousel">
-            <!--轮播图-->
+    <div class="middle" name="top">
+        <!-- 动态标 -->
+        <div id="c1"></div>
+        <!--轮播-->
+        <div class="carousel" id="demo" data-ride="carousel">      
+            <!--轮播-->
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <video id="vodeo1" width="100%" loop autoplay muted>
-                    <source src="../video/video1.mp4" id="source"/>
-                </video>
-                    
+                        <source src="../video/video1.mp4" id="source"/>
+                    </video>
+                    <div class="carousel-caption">
+                        <div class="car-cap">
+                            <p>The New McLaren 720S Spider</p>
+                            <p>Some see more</p>
+                            <a href="#"><span>discover</span></a>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                        <video id="vodeo1" width="100%" autoplay muted>
-                    <source src="../video/video2.mp4" id="source"/>
+                    <video id="vodeo2" width="100%" loop autoplay muted>
+                        <source src="../video/video2.mp4" id="source"/>
+                    </video>
+                    <div class="carousel-caption">
+                        <div class="car-cap">
+                            <p>The New McLaren 720S Spider</p>
+                            <p>Some see more</p>
+                            <a href="#"><span>discover</span></a>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                        <video id="vodeo1" width="100%" autoplay muted>
-                    <source src="../video/video3.mp4" id="source"/>
+                    <video id="vodeo3" width="100%" loop autoplay muted>
+                        <source src="../video/video3.mp4" id="source"/>
+                    </video>
+                    <div class="carousel-caption">
+                        <div class="car-cap">
+                            <p>The New McLaren 720S Spider</p>
+                            <p>Some see more</p>
+                            <a href="#"><span>discover</span></a>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                        <video id="vodeo1" width="100%" autoplay muted>
-                    <source src="../video/video4 .mp4" id="source"/>
+                    <video id="vodeo4" width="100%" loop autoplay muted>
+                        <source src="../video/video4 .mp4" id="source"/>
+                    </video>
+                    <div class="carousel-caption">
+                        <div class="car-cap">
+                            <p>The New McLaren 720S Spider</p>
+                            <p>Some see more</p>
+                            <a href="#"><span>discover</span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--指示标-->
@@ -50,33 +82,42 @@
                 <li data-target="#demo" data-slide-to="3"></li>
             </ul>
         </div>
-        <!-- 文字DIV -->
-        <div class="mid-text">
-            <div class="row latest-pad latest-hei-top">
-                <div class="latest-pad-left col-md-6 col-xs-1 ">
-                    <img src="../img/ch13.jpg" width="100%" alt="">
+        <!-- 说明 -->
+        <div class="mid-explain">
+            <p>WHALE(鲸鱼)超跑俱乐部</p>
+            <p>
+                WHALE(鲸鱼)超跑俱乐部致力于为广大爱车人士提供买卖跑车、合法赛事的交流平台。本平台可以DIY自己喜欢的跑车，有专门的技术部门支持。俱乐部会定期组织俱乐部成员进行激情极速的狂飙赛事，有丰厚的冠军奖励。
+            </p>
+            <p> 俱乐部所出售的跑车分为普通跑车和超级跑车：</p>
+            <p> 普通跑车(SportsCar)属于-种低底盘、线条流畅、动力突出的汽车类型，其最大特点是不断追求速度极限。</p>
+            <p> 超级跑车(Supercar)一般是指拥有高强动力输出，出众外形的跑车，价格一般高达千万，最高时速可达340K/h,基本只含有两个座位。超级跑车必须在加速、刹车和转弯时都很出色，非凡的外表也必不可少。</p>
+            <img src="../img/explain.jpg" alt="">
+        </div> 
+        <!-- 四张图 -->
+        <div class="mid-img">
+            <div class="row latest-hei">
+                <div class="col-md-6 col-xs-1 ">
+                    <div></div>
+                    <img src="../img/latest1.jpg" alt="">
                 </div>
-                <div class="latest-pad-left col-md-6 col-xs-1 ">
-                        <img src="../img/ch13.jpg" width="100%" alt="">
+                <div class="col-md-6 col-xs-1 ">
+                    <div></div>
+                    <img src="../img/latest2.jpg" alt="">
                 </div>
             </div>
-            <div class="row latest-pad">
-                <div class="latest-pad-left col-md-6 col-xs-1 ">
-                        <img src="../img/ch13.jpg" width="100%" alt="">
+            <div class="row latest-hei">
+                <div class="col-md-6 col-xs-1 ">
+                    <div></div>
+                    <img src="../img/latest3.jpg" alt="">
                 </div>
-                <div class="latest-pad-left col-md-6 col-xs-1 ">
-                        <img src="../img/ch13.jpg" width="100%" alt="">
+                <div class="col-md-6  col-xs-1 ">
+                    <div></div>
+                    <img src="../img/latest4.jpg" alt="">
                 </div>
             </div>
-        </div>
-        <!--图片-->
-        <div class="middle-one">
-           
-        </div>
-        <video src="../video/video1.mp4" width="100%" autoplay loop alt=""></video>
+        </div>  
     </div>
     <div id="footer"></div>
     <script src="../js/bask.js"></script>
-    
 </body>
 </html>
